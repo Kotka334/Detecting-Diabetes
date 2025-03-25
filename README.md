@@ -1,5 +1,7 @@
 # Diabetes Prediction Pipeline with Interactive UI
 
+![UI Demo](https://github.com/Kotka334/Detecting-Diabetes/blob/main/ui.jpg?raw=true)
+
 This project implements a machine learning pipeline for predicting diabetes using a cleaned clinical dataset. It includes both model training logic and a user-friendly Gradio-based interface for interactive prediction and data visualization.
 
 ## 📁 Project Structure
@@ -52,6 +54,17 @@ python model_training.py
 ```
 
 This will output `best_diabetes_model.pkl`.
+
+## 📈 Model Performance
+
+| Model               | Accuracy | Precision | Recall | F1-score | AUC-ROC |
+|---------------------|----------|-----------|--------|----------|---------|
+| Logistic Regression | 0.9189   | 0.7698    | 0.7252 | 0.7453   | 0.8811  |
+| Random Forest       | 0.9730   | 0.9682    | 0.9195 | 0.9426   | 0.9995  |
+| XGBoost             | 0.9865   | 0.9751    | 0.9751 | 0.9751   | 0.9996  |
+| LightGBM            | 0.9932   | 0.9973    | 0.9778 | 0.9872   | 0.9998  |
+| Voting Ensemble     | 0.9932   | 0.9792    | 0.9973 | 0.9879   | 0.9996  |
+| TPOT                | 0.9730   | 0.9682    | 0.9195 | 0.9426   | 0.9992  |
 
 ### Launch Gradio UI
 Once the model is trained, start the UI:
