@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>糖尿病预测系统</title>
+</head>
+<body>
+  <h1>糖尿病分类预测</h1>
+  {% if prediction is not none %}
+    <p><strong>预测的 CLASS 为：</strong> {{ prediction }}</p>
+  {% endif %}
+  {% if error %}
+    <p style="color:red;">{{ error }}</p>
+  {% endif %}
+  <form method="POST">
+    <label>Gender:</label>
+    <input type="number" name="Gender" step="any" required><br>
+    <label>AGE:</label>
+    <input type="number" name="AGE" step="any" required><br>
+    <label>Urea:</label>
+    <input type="number" name="Urea" step="any" required><br>
+    <label>Cr:</label>
+    <input type="number" name="Cr" step="any" required><br>
+    <label>HbA1c:</label>
+    <input type="number" name="HbA1c" step="any" required><br>
+    <label>Chol:</label>
+    <input type="number" name="Chol" step="any" required><br>
+    <label>TG:</label>
+    <input type="number" name="TG" step="any" required><br>
+    <label>HDL:</label>
+    <input type="number" name="HDL" step="any" required><br>
+    <label>LDL:</label>
+    <input type="number" name="LDL" step="any" required><br>
+    <label>VLDL:</label>
+    <input type="number" name="VLDL" step="any" required><br>
+    <label>BMI:</label>
+    <input type="number" name="BMI" step="any" required><br><br>
+    <input type="submit" value="预测">
+  </form>
+</body>
+</html>
